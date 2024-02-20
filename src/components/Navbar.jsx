@@ -26,28 +26,35 @@ const Navbar = () => {
         ))}
         <li className={`font-poppins font-normal cursor-pointer text-[16px] text-blue-600 hover:text-blue-500 mr-10`}> <Link to="/page1">About Us</Link></li>
         <li className={`font-poppins font-normal cursor-pointer text-[16px] text-blue-600 hover:text-blue-500 mr-10`}> <Link to="/page2">Service</Link></li>
-        
+        <li className={`font-poppins font-normal cursor-pointer text-[16px] text-blue-600 hover:text-blue-500 mr-10`}> <Link to="/page5">Gallery</Link></li>
+
 
       </ul>
       <div className='sm:hidden flex flex-1 justify-end items-center z-20'>
         <img
           src={toggle ? close : menu}
           alt='menu'
-          className='w-[28px] h-[28px] object-contain'
+          className='w-[28px] h-[28px] mr-5 object-contain'
           onClick={() => setToggle((previous) => !previous)}
         />
         <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-blue-500 absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
-          <ul className='list-none flex flex-col justify-end items-center flex-1'>
+          <ul className='list-none flex flex-col justify-end pl-6 items-center flex-1'>
+          <li className={`font-poppins font-normal cursor-pointer text-[16px] text-white mr-10 mb-4`}> <Link to="/">Home</Link></li>
             {navLinks.map((nav, i) => (
               <li 
                 key={nav.id}
-                className={`font-poppins font-normal cursor-pointer text-[16px] ${i === navLinks.length - 1 ? 'mr-0' : 'mb-4'} text-white mr-10`}
+                className={`font-poppins font-normal cursor-pointer text-[16px] mb-4 text-center text-white mr-10`}
               >
                 <a href={`#${nav.id}`}>
                   {nav.title}
                 </a>
               </li>        
             ))}
+       <li className={`font-poppins font-normal cursor-pointer text-[16px] text-white mr-10 mb-4`}> <Link to="/page1">About Us</Link></li>
+        <li className={`font-poppins font-normal cursor-pointer text-[16px] text-white mr-10 mb-4`}> <Link to="/page2">Service</Link></li>
+        <li className={`font-poppins font-normal cursor-pointer text-[16px] text-white mr-10 mb-4`}> <Link to="/page5">Gallery</Link></li>
+
+
           </ul>
         </div>
       </div>

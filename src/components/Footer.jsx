@@ -28,7 +28,7 @@ const Footer = () => {
 
     try {
       // Send data to Firebase Realtime Database
-      await axios.post('https://mfsg-7c373-default-rtdb.firebaseio.com/userDataRecords.json', formData);
+      await axios.post('#', formData);
 
       // Reset form data
       setFormData({ name: '', email: '', message: '' });
@@ -42,7 +42,7 @@ const Footer = () => {
     }
   };
   return (
-    <section className={`${styles.flexCenter} ${styles.paddingY} px-10 flex-col md:flex-row bg-blue-400`}>
+    <section className={`${styles.flexCenter} ${styles.paddingY} px-10 flex-col sm:flex-row bg-blue-400`}>
       {/* Left Column */}
       <div className='md:w-1/3 flex flex-col mb-8 mr-10'>
         {/* <img src={logo} alt='logo' className='w-[266px] h-[172px] object-contain' /> */}
@@ -53,6 +53,7 @@ const Footer = () => {
       </div>
 
       {/* Middle Column - Links */}
+      {window.innerWidth >= 1070 && (
       <div className='md:w-1/3 flex flex-col justify-start mt-10'>
         {footerLinks.map((link) => (
           <div key={link.title} className='flex flex-col ss:my-0 my-4 min-w-[150px]'>
@@ -73,17 +74,19 @@ const Footer = () => {
             </ul>
           </div>
         ))}
-      </div>
+      </div>)}
 
       {/* Right Column - Contact Form */}
       {/* contact part */}
-      <div className='md:w-1/3 w-full flex flex-col justify-items-center'>
+      <div className='sm:w-1/3 w-full sm:ml-20 flex flex-col justify-items-center'>
       <section id='footers' className='w-full flex flex-col mb-4 bg-blue-500 rounded-lg py-10 px-8'>
           <h1 className='text-white mb-5 text-[30px] font-bold'>Contact us</h1>
           <input
             type='text'
             name='name'
             placeholder='Name'
+            required
+            autoComplete='off'
             value={formData.name}
             onChange={handleChange}
             className='mb-4 py-2 px-3 rounded-lg'
@@ -92,6 +95,8 @@ const Footer = () => {
             type='email'
             name='email'
             placeholder='Email'
+            required
+            autoComplete='off'
             value={formData.email}
             onChange={handleChange}
             className='mb-4 py-2 px-3 rounded-lg'
@@ -100,6 +105,8 @@ const Footer = () => {
             name='message'
             placeholder='Message'
             rows='4'
+            required
+            autoComplete='off'
             value={formData.message}
             onChange={handleChange}
             className='mb-4 py-2 px-3 rounded-lg'

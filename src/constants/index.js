@@ -17,6 +17,33 @@ import {
   mf1,
   mf2,
   mf5,
+  aa1,
+  aa2,
+  aa3,
+  aa4,
+  aa5,
+  aa6,
+  z1,
+  z2,
+  z3,
+  z4,
+  z5,
+  z6,
+  z7,
+  z8,
+  z9,
+  z10,
+  z11,
+  z12,
+  z13,
+  z14,
+  z15,
+  z16,
+  z17,
+  z18,
+  z19,
+  z20,
+  z21,
 } from "../assets";
 
 export const navLinks = [
@@ -108,18 +135,18 @@ export const feedback = [
 export const stats = [
   {
     id: "stats-1",
-    title: "User Active",
-    value: "3800+",
+    title: "Happy Customer",
+    value: "150",
   },
   {
     id: "stats-2",
-    title: "Trusted by Company",
-    value: "230+",
+    title: "Year of Experties",
+    value: "14",
   },
   {
     id: "stats-3",
-    title: "Transaction",
-    value: "$230M+",
+    title: "Project",
+    value: "80",
   },
 ];
 
@@ -178,19 +205,19 @@ export const socialMedia = [
 export const clients = [
   {
     id: "client-1",
-    logo: airbnb,
+    logo: aa4,
   },
   {
     id: "client-2",
-    logo: binance,
+    logo: aa5,
   },
   {
     id: "client-3",
-    logo: coinbase,
+    logo: aa3,
   },
   {
     id: "client-4",
-    logo: dropbox,
+    logo: aa6,
   },
  
 ];
@@ -231,4 +258,115 @@ export const feedback1 = [
     title: "Motor Maintenance",
     img: mf5,
   },
+];
+export const feedback3 = [
+  {
+    id: "feedback-1",
+    
+    title: "Electrical Maintenance",
+    img: z1,
+  },
+  {
+    id: "feedback-2",
+   
+    title: "Electrical System Testing",
+    img: z2,
+  },
+  {
+    id: "feedback-3",
+ 
+    title: "Motor Maintenance",
+    img: z3,
+  },
+  {
+    id: "feedback-4",
+    
+    title: "Electrical Maintenance",
+    img: z4,
+  },
+  {
+    id: "feedback-5",
+   
+    title: "Electrical System Testing",
+    img: z5,
+  },
+  {
+    id: "feedback-6",
+ 
+    title: "Motor Maintenance",
+    img: z6,
+  },
+];
+export const feedback4 = [
+  {
+    id: "feedback-1",
+    
+    title: "Electrical Maintenance",
+    img: z7,
+  },
+  {
+    id: "feedback-2",
+   
+    title: "Electrical System Testing",
+    img: z9,
+  },
+  {
+    id: "feedback-3",
+ 
+    title: "Motor Maintenance",
+    img: z10,
+  },
+  {
+    id: "feedback-4",
+    
+    title: "Electrical Maintenance",
+    img: z11,
+  },
+  {
+    id: "feedback-5",
+   
+    title: "Electrical System Testing",
+    img: z12,
+  },
+  {
+    id: "feedback-6",
+ 
+    title: "Motor Maintenance",
+    img: z20,
+  },
+];
+export const feedback2 = [
+  {
+    id: "feedback-8",
+   
+    title: "Electrical System Testing",
+    img: z8,
+  },
+  {
+    id: "feedback-8",
+   
+    title: "Electrical System Testing",
+    img: z15,
+  },
+
+  {
+    id: "feedback-8",
+   
+    title: "Electrical System Testing",
+    img: z17,
+  },
+  {
+    id: "feedback-9",
+ 
+    title: "Motor Maintenance",
+    img: z18,
+  },
+
+  {
+    id: "feedback-10",
+   
+    title: "Electrical System Testing",
+    img: z21,
+  },
+
 ];

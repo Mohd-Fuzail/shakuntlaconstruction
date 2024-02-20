@@ -88,16 +88,17 @@ const Billing = () => {
       <div className={`pl-10 ${layout.sectionInfo}`}>
         <h2 className={styles.heading2}>About Us</h2>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-          With a rich legacy spanning two decades, our firm has emerged as
-          a beacon of excellence in the electrical services sector. We attribute
-          our success to a dedicated team of 10-15 skilled professionals and
-          30-45 laborers. Fueled by our commitment to innovation and client
-          satisfaction, we continue to navigate the ever-evolving landscape
-          of electrical services, ensuring precision, safety, and adherence
-          to industry standards. Our vision for the future revolves around
-          sustaining excellence and reliability, illuminating the path for
-          continued success in the years to come.
+        Welcome to Elec Tricks Engineers, a pioneering force in the realm of
+       Power Sector and Substation Testing Instruments. Established with unwavering
+        commitment in May 2022, Elec Tricks Engineers boasts an impressive journey marked
+         by unparalleled expertise in the domain.
+         Our corporate headquarters, strategically located at ADDRESS,
+          serves as the nerve center for our swift and efficient service 
+          delivery to a diverse clientele. We extend our services to Central 
+          and State Generation, Transmission and Distribution Companies, Power Utilities,
+           OEMs, EPCs, Railways, System Integrators, Testing Laboratories, and individual Testers.
         </p>
+
         {/* Use Link to navigate to the "/page1" route */}
         <Link to="/page1">
           <button

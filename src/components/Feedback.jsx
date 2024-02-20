@@ -39,7 +39,7 @@ const Feedback = ({ content, name, title, img }) => {
      <img
         src={img}
        
-        className='h-[50vh]  hover:scale-125 duration-1000 rounded-lg'
+        className='h-[50vh] w-[100%]  hover:scale-125 duration-1000 rounded-lg'
       />
     <p className='font-poppins font-extrabold text-[20px] leading-[24px] mt-12 text-yellow-500'>{title}</p>
       <p className='font-poppins font-normal text-[15px] leading-[23px] text-gray-700  mt-4  my-5'>

@@ -10,7 +10,8 @@ import { useInView } from 'react-intersection-observer';
 
 import styles, { layout } from '../style';
 import { f1,f2,f3,f4,f5,f6 } from '../assets';
-
+import Feedback from './Feedback';
+import { feedback } from '../constants';
 
 
 
@@ -32,213 +33,27 @@ function Page2() {
           </div>
         </div>
       </div>
-
-      <div className={`bg-white px-20 sm:h-[100vh] sm:mb-60 ${styles.paddingY} ${styles.boxWidth}`}>
-        <h1 className={`${styles.paddingY} font-bold text-[30px]`}>What we do ???</h1>
-        <p className={`text-ellipsis overflow-hidden h-[100vh] text-[17px] leading-loose font-mono xs:text-[13px] xs:font-semibold sm:text-[18px] ss:text-[16px] lg:text-[24px]`}>
-        At COMPANY NAME, we take pride in offering a diverse range of top-notch services in the field of Power Sector and Substation Testing Instruments. Established in May 2022, our journey has been marked by a focus on excellence and efficiency. Our corporate office at ADDRESS positions us strategically to provide prompt and effective services to a wide array of customers.
-
-We cater to Central and State Generation, Transmission and Distribution Companies, Power Utilities, OEMs, EPCs, Railways, System Integrators, Testing Laboratories, and Testers. Our dedicated team of engineers ensures that we cover the spectrum of needs in the power sector.
-
-In a remarkably short span, COMPANY NAME has carved out a distinct identity in the Power Sector. Our commitment to innovation, precision, safety, and adherence to industry standards has propelled our success, making us a trusted name in the industry.
-        </p>
-      </div>
-
-      {/* 2 part */}
-     
-      {/* 11 part */}
-      <div className='bg-white h-[50vh] flex justify-between py-5 px-10 items-center xs:px-5 lg:px-40 '>
-       
-        <div className=' items-center h-[40vh] mr-3 overflow-hidden'>
-          <h1 className='text-[20px] font-semibold mb-3'>Transformer Services</h1>
-          <ul className='list-none'>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              SFRA (Sweep Frequency Response Analysis)
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Tan Delta Measurement
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Insulation Resistance Testing
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Winding Resistance Testing
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Magnetic Balance & Magnetizing Current Analysis
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Short Circuit Testing
-            </li>
-          </ul>
-        </div>
-        <div className='overflow-hidden'>
-          <img src={mf1} className='h-[45vh] hover:scale-110 duration-500 rounded-lg' alt='Your Alt Text' />
-        </div>
+      <section id='clients' className={`${styles.paddingY} ${styles.flexce} flex-col relative`}>
+      <div className='absolute z-[0] w-[60%] h-[60%] -right-[50%] rounded-full  bottom-40'/>
+      <hr className='w-90 h-1 xs:mb-5 mb-10 bg-black border-0 rounded'/>
+      <div className='w-full bg-red-400  items-center xs:mb-15   mb-6 relative z-[1]'>
+        <h2 className={`text-center font-poppins text-transparent  bg-clip-text bg-gradient-to-r from-white to-white ${styles.heading2}`}>Area of Operation</h2>
     
       </div>
-   
-      {/* 22 part */}
-      <div className=' h-[50vh] flex justify-between px-10 py-5 border-t-[1px] border-t-[#3F3E45]  xs:px-5 lg:px-40 items-center' >
-        <div className='overflow-hidden'>
-          <img src={mf1} className='h-[45vh]  hover:scale-110 duration-500 rounded-lg' alt='Your Alt Text' />
-        </div>
-        <div className='ml-5 items-center h-[40vh] overflow-hidden'>
-          <h1 className='text-[20px] font-semibold mb-3'>Circuit Breaker Services</h1>
-          <ul className='list-none'>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Contact Resistance Measurement
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Timing Analysis
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Insulation Resistance Testing
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Vacuum Bottle Testing
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              DCRM (Dynamic Contact Resistance Measurement)
-            </li>
-          </ul>
-        </div>
+      <hr className='w-90 h-1 mx-auto mb-10  bg-black border-0 rounded'/>
+      
+      <div className='max-w-[1320] mx-auto grid lg:grid-cols-3 md:grid-cols-2 gap-8 px-[20px]'>
+        {feedback.map((card) => (
+          <Feedback key={card.id} {...card}/>        
+        ))}
+      </div> 
+    </section>
+    <hr className='w-90 h-1 xs:mb-5 mb-10 bg-black border-0 rounded'/>
+      <div className='w-full bg-red-400  items-center xs:mb-15   mb-6 relative z-[1]'>
+        <h2 className={`text-center font-poppins text-transparent  bg-clip-text bg-gradient-to-r from-white to-white ${styles.heading2}`}>Operational Domain</h2>
     
       </div>
-      {/* 33 part */}
-      <div className=' h-[50vh] flex justify-between px-10 py-5 border-t-[1px] border-t-[#3F3E45]  xs:px-5 lg:px-40 items-center' >
-       
-        <div className='mr-5 items-center h-[40vh] overflow-hidden'>
-          <h1 className='text-[20px] font-semibold mb-3'>Current Transformer Services</h1>
-          <ul className='list-none'>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Tan Delta Measurement
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Insulation Resistance Testing
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Ratio Testing (Primary or Secondary Injection)
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Knee Point Testing
-            </li>
-            Winding Resistance Testing
-          </ul>
-        </div>
-        <div className='overflow-hidden'>
-          <img src={mf1} className='h-[45vh] hover:scale-110 duration-500 rounded-lg' alt='Your Alt Text' />
-        </div>
-    
-      </div>
-      {/* 44 part */}
-      <div className=' h-[50vh] flex justify-between px-10 py-5 border-t-[1px] border-t-[#3F3E45]  xs:px-5 lg:px-40 items-center' >
-        <div className='overflow-hidden'>
-          <img src={mf1} className='h-[45vh] hover:scale-110 duration-500 rounded-lg' alt='Your Alt Text' />
-        </div>
-        <div className='ml-5 items-center h-[40vh] overflow-hidden'>
-          <h1 className='text-[20px] font-semibold mb-3'>Potential Transformer / IVT / CVT Services</h1>
-          <ul className='list-none'>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Tan Delta Measurement
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Insulation Resistance Testing
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Ratio Analysis
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Winding Resistance Testing
-            </li>
-          </ul>
-        </div>
-    
-      </div>
-      {/* 55 part */}
-      <div className=' h-[50vh] flex justify-between px-10 py-5 border-t-[1px] border-t-[#3F3E45]  xs:px-5 lg:px-40 items-center' >
-       
-        <div className='mr-5 items-center h-[40vh] overflow-hidden'>
-          <h1 className='text-[20px] font-semibold mb-3'>Relay Services</h1>
-          <ul className='list-none'>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Electro-mechanical Relay Testing
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Static Relay Testing
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Numerical Relay Testing
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Differential Relay Testing, etc.
-            </li>
-          </ul>
-        </div>
-        <div className='overflow-hidden'>
-          <img src={mf1} className='h-[45vh] hover:scale-110 duration-500 rounded-lg' alt='Your Alt Text' />
-        </div>
-    
-      </div>
-      {/* 66 part */}
-      <div className='mb-20 h-[50vh] flex justify-between px-10 py-5 border-t-[1px] border-t-[#3F3E45]  xs:px-5 lg:px-40 items-center' >
-        <div className='overflow-hidden'>
-          <img src={mf1} className='h-[45vh] hover:scale-110 duration-500 rounded-lg' alt='Your Alt Text' />
-        </div>
-        <div className='ml-5  items-center h-[40vh] overflow-hidden'>
-          <h1 className='text-[20px] font-semibold mb-3'>Gas Insulated Substation Services</h1>
-          <ul className='list-none'>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Current Transformer Testing
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Potential Transformer Testing
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Circuit Breaker Testing
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Lightning Arrester Testing
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Isolator Testing
-            </li>
-            <li>
-              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
-              Earth Switch Testing
-            </li>
-          </ul>
-        </div>
-    
-      </div>
+      <hr className='w-90 h-1 mx-auto mb-10  bg-black border-0 rounded'/>
 
 
 
@@ -246,9 +61,7 @@ In a remarkably short span, COMPANY NAME has carved out a distinct identity in t
 <div className={` ${styles.flexce} py-5 flex-col relative bg-gray-100`} ref={ref}>
      
       <div className='absolute z-[0] w-[60%] h-[60%] -right-[50%] rounded-full  bottom-40' />
-      <div className='w-full   items-center sm:mb-16 mb-6 relative z-[1]'>
-        <h2 className={`text-center font-poppins ${styles.heading2}`}>Services</h2>
-      </div>
+      
       <div className='overflow-hidden'>
         <m.div
           variants={animationVariants}
@@ -335,6 +148,204 @@ In a remarkably short span, COMPANY NAME has carved out a distinct identity in t
       </div>
  
       </div> 
+
+
+      {/* 2 part */}
+     
+      {/* 11 part */}
+      {/* <div className='bg-white h-[50vh] flex justify-between py-5 px-10 items-center xs:px-5 lg:px-40 '>
+       
+        <div className=' items-center h-[40vh] mr-3 overflow-hidden'>
+          <h1 className='text-[20px] font-semibold mb-3'>Transformer Services</h1>
+          <ul className='list-none'>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              SFRA (Sweep Frequency Response Analysis)
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Tan Delta Measurement
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Insulation Resistance Testing
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Winding Resistance Testing
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Magnetic Balance & Magnetizing Current Analysis
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Short Circuit Testing
+            </li>
+          </ul>
+        </div>
+        <div className='overflow-hidden'>
+          <img src={mf1} className='h-[45vh] hover:scale-110 duration-500 rounded-lg' alt='Your Alt Text' />
+        </div>
+    
+      </div> */}
+   
+      {/* 22 part */}
+      {/* <div className=' h-[50vh] flex justify-between px-10 py-5 border-t-[1px] border-t-[#3F3E45]  xs:px-5 lg:px-40 items-center' >
+        <div className='overflow-hidden'>
+          <img src={mf1} className='h-[45vh]  hover:scale-110 duration-500 rounded-lg' alt='Your Alt Text' />
+        </div>
+        <div className='ml-5 items-center h-[40vh] overflow-hidden'>
+          <h1 className='text-[20px] font-semibold mb-3'>Circuit Breaker Services</h1>
+          <ul className='list-none'>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Contact Resistance Measurement
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Timing Analysis
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Insulation Resistance Testing
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Vacuum Bottle Testing
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              DCRM (Dynamic Contact Resistance Measurement)
+            </li>
+          </ul>
+        </div>
+    
+      </div> */}
+      {/* 33 part */}
+      {/* <div className=' h-[50vh] flex justify-between px-10 py-5 border-t-[1px] border-t-[#3F3E45]  xs:px-5 lg:px-40 items-center' >
+       
+        <div className='mr-5 items-center h-[40vh] overflow-hidden'>
+          <h1 className='text-[20px] font-semibold mb-3'>Current Transformer Services</h1>
+          <ul className='list-none'>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Tan Delta Measurement
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Insulation Resistance Testing
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Ratio Testing (Primary or Secondary Injection)
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Knee Point Testing
+            </li>
+            Winding Resistance Testing
+          </ul>
+        </div>
+        <div className='overflow-hidden'>
+          <img src={mf1} className='h-[45vh] hover:scale-110 duration-500 rounded-lg' alt='Your Alt Text' />
+        </div>
+    
+      </div> */}
+      {/* 44 part */}
+      {/* <div className=' h-[50vh] flex justify-between px-10 py-5 border-t-[1px] border-t-[#3F3E45]  xs:px-5 lg:px-40 items-center' >
+        <div className='overflow-hidden'>
+          <img src={mf1} className='h-[45vh] hover:scale-110 duration-500 rounded-lg' alt='Your Alt Text' />
+        </div>
+        <div className='ml-5 items-center h-[40vh] overflow-hidden'>
+          <h1 className='text-[20px] font-semibold mb-3'>Potential Transformer / IVT / CVT Services</h1>
+          <ul className='list-none'>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Tan Delta Measurement
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Insulation Resistance Testing
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Ratio Analysis
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Winding Resistance Testing
+            </li>
+          </ul>
+        </div>
+    
+      </div> */}
+      {/* 55 part */}
+      {/* <div className=' h-[50vh] flex justify-between px-10 py-5 border-t-[1px] border-t-[#3F3E45]  xs:px-5 lg:px-40 items-center' >
+       
+        <div className='mr-5 items-center h-[40vh] overflow-hidden'>
+          <h1 className='text-[20px] font-semibold mb-3'>Relay Services</h1>
+          <ul className='list-none'>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Electro-mechanical Relay Testing
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Static Relay Testing
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Numerical Relay Testing
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Differential Relay Testing, etc.
+            </li>
+          </ul>
+        </div>
+        <div className='overflow-hidden'>
+          <img src={mf1} className='h-[45vh] hover:scale-110 duration-500 rounded-lg' alt='Your Alt Text' />
+        </div>
+    
+      </div> */}
+      {/* 66 part */}
+      {/* <div className='mb-20 h-[50vh] flex justify-between px-10 py-5 border-t-[1px] border-t-[#3F3E45]  xs:px-5 lg:px-40 items-center' >
+        <div className='overflow-hidden'>
+          <img src={mf1} className='h-[45vh] hover:scale-110 duration-500 rounded-lg' alt='Your Alt Text' />
+        </div>
+        <div className='ml-5  items-center h-[40vh] overflow-hidden'>
+          <h1 className='text-[20px] font-semibold mb-3'>Gas Insulated Substation Services</h1>
+          <ul className='list-none'>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Current Transformer Testing
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Potential Transformer Testing
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Circuit Breaker Testing
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Lightning Arrester Testing
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Isolator Testing
+            </li>
+            <li>
+              <img src={check} alt='Check' className='w-4 h-4 inline-block mr-2' />
+              Earth Switch Testing
+            </li>
+          </ul>
+        </div>
+    
+      </div> */}
+  
       <Footer/>
     </div>
   );
